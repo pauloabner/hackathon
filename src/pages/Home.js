@@ -13,7 +13,7 @@ export default class Home extends Component {
         <br/>
         <br/>
         <Link to='/estabelecimento'>
-          <img src='/images/local.png' style={{maxWidth: '100%'}} />
+          <img src='/images/local.png' alt='Procurando estabelecimento...' style={{maxWidth: '100%'}} />
         </Link>
         <br/>
         <CircularProgress color="accent" />

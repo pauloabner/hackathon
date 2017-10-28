@@ -8,8 +8,6 @@ import Jogos from './pages/Jogos';
 
 import Roleta from './jogos/Roleta';
 
-import Navbar from './components/Navbar';
-
 const theme = createMuiTheme();
 
 export default class App extends Component {
