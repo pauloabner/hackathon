@@ -8,3 +8,7 @@ body {
 .content {
   padding: 0 24px;
 }
+
+a {
+	text-decoration: none;
+}
