@@ -25,10 +25,16 @@ export default class Jogos extends Component {
               <GridListTileBar title='Roleta' subtitle='Teste sua sorte' />
             </Link>
           </GridListTile>
-          <GridListTile key={'dados'}>
-            <img src='/images/dados.jpg' alt='Dados' />
-            <Link to='/jogos/dados'>
-              <GridListTileBar title='Dados' subtitle='Jogue dados com a galera' />
+          <GridListTile key={'celular-proibido'}>
+            <img src='/images/mobile_phone_forbidden.jpg' alt='Forbidden' />
+            <Link to='/jogos/forbidden'>
+              <GridListTileBar title='Quem vê perde!' subtitle='Não deixe ninguem da sua mesa olhando o celular' />
+            </Link>
+          </GridListTile>
+          <GridListTile key={'fidelidade'}>
+            <img src='/images/teste_de_fidelidade.jpg' alt='Fidelidade' />
+            <Link to='/jogos/fidelidade'>
+              <GridListTileBar title='Teste de Fidelidade' subtitle='Você vem sempre aqui?' />
             </Link>
           </GridListTile>
         </GridList>
