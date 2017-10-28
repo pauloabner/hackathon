@@ -8,6 +8,14 @@ import { FormLabel, FormControl, FormControlLabel, FormHelperText } from 'materi
 import Card, { CardActions, CardContent } from 'material-ui/Card';
 
 export default class QuizQuestion extends Component {
+  state = {
+    value: '',
+  };
+
+  handleChange = (event, value) => {
+    this.setState({ value });
+  };
+
   render() {
     return (
       <div>
@@ -19,7 +27,10 @@ export default class QuizQuestion extends Component {
                   De qual banda é a música "Só os Loucos Sabem"?
                 </Typography>
                 <Typography type="body1">
-                  <RadioGroup name="question1">
+                  <RadioGroup name="question1"
+                    value={this.state.value}
+                    onChange={this.handleChange}
+                  >
                     <FormControlLabel value="answer1" control={<Radio />} label="CPM 22" />
                     <FormControlLabel value="answer2" control={<Radio />} label="Legião Urbana" />
                     <FormControlLabel value="answer3" control={<Radio />} label="Charlie Brown Junior" />
@@ -35,6 +46,20 @@ export default class QuizQuestion extends Component {
               </CardActions>
             </Card>
             <FormLabel component="legend"></FormLabel>
+          </FormControl>
+
+          <FormControl component="fieldset" required error >
+            <FormLabel component="legend">Gender</FormLabel>
+            <RadioGroup
+              aria-label="gender"
+              name="gender2"
+            >
+              <FormControlLabel value="male" control={<Radio />} label="Male" />
+              <FormControlLabel value="female" control={<Radio />} label="Female" />
+              <FormControlLabel value="other" control={<Radio />} label="Other" />
+              <FormControlLabel value="disabled" disabled control={<Radio />} label="Disabled" />
+            </RadioGroup>
+            <FormHelperText>You can display an error</FormHelperText>
           </FormControl>
         </Paper>
       </div>
