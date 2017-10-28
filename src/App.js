@@ -7,6 +7,8 @@ import Home from './pages/Home';
 import Estabelecimento from './pages/Estabelecimento';
 import Jogos from './pages/Jogos';
 
+import Roleta from './jogos/Roleta';
+
 import Navbar from './components/Navbar';
 
 const theme = createMuiTheme();
@@ -23,7 +25,8 @@ export default class App extends Component {
         <div>
           <Route exact path='/' component={Home}/>
           <Route path='/estabelecimento' component={Estabelecimento}/>
-          <Route path='/jogos' component={Jogos}/>
+          <Route exact path='/jogos' component={Jogos}/>
+          <Route exact path='/jogos/roleta' component={Roleta} />
         </div>
       </MuiThemeProvider>
     );
