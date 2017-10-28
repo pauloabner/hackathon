@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles';
+import { Grid } from 'material-ui';
 
 import Home from './pages/Home';
 import About from './pages/About';
@@ -33,10 +34,10 @@ export default class App extends Component {
       <MuiThemeProvider theme={theme}>
         <div>
           <Navbar ref={(ref) => {this.navbar = ref}}/>
-          <Route exact path='/' render={() => {
+          <Route exact path='/' component={() => {
             return <Home appState={this.setSharedState.bind(this)}/>
           }}/>
-          <Route exact path='/about' render={() => {
+          <Route path='/about' render={() => {
             return <About appState={this.setSharedState.bind(this)}/>
           }}/>
         </div>
