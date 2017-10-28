@@ -7,6 +7,7 @@ import Estabelecimento from './pages/Estabelecimento';
 import Jogos from './pages/Jogos';
 
 import Roleta from './jogos/Roleta';
+import Quiz from './jogos/Quiz';
 
 const theme = createMuiTheme();
 
@@ -19,6 +20,7 @@ export default class App extends Component {
           <Route exact path='/estabelecimento' component={Estabelecimento}/>
           <Route exact path='/jogos' component={Jogos}/>
           <Route exact path='/jogos/roleta' component={Roleta} />
+          <Route exact path='/jogos/quiz' component={Quiz} />
           <Route exact path='/' component={Home}/>
           <Route component={Home}/>
         </Switch>
