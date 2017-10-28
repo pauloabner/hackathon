@@ -1,14 +1,17 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { GridList, GridListTile, GridListTileBar } from 'material-ui/GridList';
+import Typography from 'material-ui/Typography';
 
 export default class Jogos extends Component {
 
   render() {
     return (
-      <div>
-        <h1>Jogos</h1>
-        <p>That's what I'm talking about</p>
+      <div style={{position: 'fixed',
+                   top: 0, bottom: 0, left: 0, right: 0,
+									 overflow: 'auto',
+                   padding: '0 24px', background: '#eee'}}>
+				<Typography type="headline" component="h1" style={{ margin: '20px 0' }}>Jogos</Typography>
         <GridList>
           <GridListTile key={'quiz'}>
             <img src='/images/quiz.jpg' alt='Quiz' />
