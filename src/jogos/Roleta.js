@@ -1,19 +1,21 @@
 import React, { Component } from 'react';
-import Button from 'material-ui/Button';
-
-const style = {
-  margin: 12,
-};
+import { Button } from 'material-ui';
 
 export default class Roleta extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = { girando: false };
+  }
+
+  rodar = () => {
+    this.setState({girando: !this.state.girando});
+  }
+
   render() {
     return (
-      <div>
-        <h1>Roleta</h1>
-        <div >
-          <img src='/images/wheel.png' style={{ maxWidth: '100%' }} />
-        </div>
-        <Button raised color="primary" style={style} > Rodar </Button>
+      <div style={{textAlign: 'center', padding: '50px 0 0'}}>
+        <img style={{maxWidth: '100%'}} src='/images/wheel.png' alt='Roleta' onClick={this.rodar} className={this.state.girando ? 'girando' : ''}/>
       </div>
     );
   }
