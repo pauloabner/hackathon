@@ -36,7 +36,7 @@ export default class Quiz extends Component {
             </Typography>
           </CardContent>
           <CardActions>
-            <Button raised color="primary">Participar</Button>
+            <Button raised color="primary" disabled>Participar</Button>
           </CardActions>
         </Card>
       </div>
