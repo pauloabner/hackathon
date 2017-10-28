@@ -4,7 +4,8 @@ import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles';
 import { Grid } from 'material-ui';
 
 import Home from './pages/Home';
-import About from './pages/About';
+import Estabelecimento from './pages/Estabelecimento';
+import Jogos from './pages/Jogos';
 
 import Navbar from './components/Navbar';
 
@@ -14,32 +15,15 @@ export default class App extends Component {
 
   constructor(props) {
     super(props);
-    this.sharedState = {}
-  }
-
-  setSharedState(newState) {
-    Object.assign(this.sharedState, newState);
-  } 
-
-  componentDidMount() {
-    this.navbar.setState(this.sharedState);
-  }
-  
-  componentDidUpdate() {
-    this.navbar.setState(this.sharedState);
   }
 
   render() {
     return (
       <MuiThemeProvider theme={theme}>
         <div>
-          <Navbar ref={(ref) => {this.navbar = ref}}/>
-          <Route exact path='/' component={() => {
-            return <Home appState={this.setSharedState.bind(this)}/>
-          }}/>
-          <Route path='/about' render={() => {
-            return <About appState={this.setSharedState.bind(this)}/>
-          }}/>
+          <Route exact path='/' component={Home}/>
+          <Route path='/estabelecimento' component={Estabelecimento}/>
+          <Route path='/jogos' component={Jogos}/>
         </div>
       </MuiThemeProvider>
     );
