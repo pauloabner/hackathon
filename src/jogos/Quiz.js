@@ -2,12 +2,11 @@ import React, { Component } from 'react';
 import Card, { CardActions, CardContent } from 'material-ui/Card';
 import Button from 'material-ui/Button';
 import Typography from 'material-ui/Typography';
+import { Redirect, Link } from 'react-router-dom';
 
 
 export default class Quiz extends Component {
   render() {
-
-
     return (
       <div>
         <Card>
@@ -21,7 +20,9 @@ export default class Quiz extends Component {
             </Typography>
           </CardContent>
           <CardActions>
-            <Button raised color="primary">Participar</Button>
+            <Link to='/jogos/quiz/questions'>
+              <Button raised color="primary">Participar</Button>
+            </Link>
           </CardActions>
         </Card>
         <br/>
