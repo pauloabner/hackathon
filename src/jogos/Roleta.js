@@ -10,6 +10,7 @@ export default class Roleta extends Component {
 
   rodar = () => {
     this.setState({girando: !this.state.girando});
+    setTimeout(() => { alert("5%") }, 2000);
   }
 
   render() {
