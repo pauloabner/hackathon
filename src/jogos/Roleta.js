@@ -4,13 +4,16 @@ export default class Roleta extends Component {
 
   constructor(props) {
     super(props);
-    this.state = { girando: false };
+    this.state = { girando: false, premio: false };
   }
 
   rodar = () => {
     this.setState({girando: !this.state.girando});
     setTimeout(() => {
       this.setState({girando: false});
+      setTimeout(() => {
+        this.setState({premio: true});
+      }, 1000)
      }, 3000);
   }
 
@@ -21,7 +24,10 @@ export default class Roleta extends Component {
                    textAlign: 'center', padding: '100px 0 0',
                    background: 'center -70px url(/images/roleta_background.jpg)'
         }}>
-        <img style={{maxWidth: '100%'}} src='/images/wheel.png' alt='Roleta' onClick={this.rodar} className={this.state.girando ? 'girando' : ''}/>
+        <img style={{maxWidth: '100%', display: this.state.premio ? 'none' : 'inline-block'}}
+             src='/images/wheel.png' alt='Roleta' onClick={this.rodar} className={this.state.girando ? 'girando' : ''}/>
+        <img style={{maxWidth: '100%', display: this.state.premio ? 'inline-block' : 'none'}}
+             src='/images/5_percent.png' alt='Prêmio'/>
       </div>
     );
   }
