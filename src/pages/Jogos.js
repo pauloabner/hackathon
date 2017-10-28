@@ -34,7 +34,7 @@ export default class Jogos extends Component {
           <GridListTile key={'fidelidade'}>
             <img src='/images/teste_de_fidelidade.jpg' alt='Fidelidade' />
             <Link to='/jogos/fidelidade'>
-              <GridListTileBar title='Teste de Fidelidade' subtitle='Faça seu chech-in e prove sua fidelidade.' />
+              <GridListTileBar title='Teste de Fidelidade' subtitle='Faça seu check-in e prove sua fidelidade.' />
             </Link>
           </GridListTile>
           <GridListTile key={'karaoke'}>
