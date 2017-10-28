@@ -41,25 +41,11 @@ export default class QuizQuestion extends Component {
               </CardContent>
               <CardActions>
                 <Link to='/jogos/quiz/questions'>
-                  <Button raised color="primary">Participar</Button>
+                  <Button raised color="primary">Enviar</Button>
                 </Link>
               </CardActions>
             </Card>
             <FormLabel component="legend"></FormLabel>
-          </FormControl>
-
-          <FormControl component="fieldset" required error >
-            <FormLabel component="legend">Gender</FormLabel>
-            <RadioGroup
-              aria-label="gender"
-              name="gender2"
-            >
-              <FormControlLabel value="male" control={<Radio />} label="Male" />
-              <FormControlLabel value="female" control={<Radio />} label="Female" />
-              <FormControlLabel value="other" control={<Radio />} label="Other" />
-              <FormControlLabel value="disabled" disabled control={<Radio />} label="Disabled" />
-            </RadioGroup>
-            <FormHelperText>You can display an error</FormHelperText>
           </FormControl>
         </Paper>
       </div>
