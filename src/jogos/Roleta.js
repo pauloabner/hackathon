@@ -10,10 +10,7 @@ export default class Roleta extends Component {
   rodar = () => {
     this.setState({girando: !this.state.girando});
     setTimeout(() => {
-      this.setState({girando: false});
-      setTimeout(() => {
-        this.setState({premio: true});
-      }, 1000)
+      this.setState({girando: false, premio: true});
      }, 3000);
   }
 
@@ -22,11 +19,11 @@ export default class Roleta extends Component {
       <div style={{position: 'fixed',
                    top: 0, bottom: 0, left: 0, right: 0,
                    textAlign: 'center', padding: '100px 0 0',
-                   background: 'center -70px url(/images/roleta_background.jpg)'
+                   background: 'center url(/images/roleta_background.jpg)'
         }}>
-        <img style={{maxWidth: '100%', display: this.state.premio ? 'none' : 'inline-block'}}
+        <img style={{maxWidth: '80%', width: window.innerWidth, display: this.state.premio ? 'none' : 'inline-block'}}
              src='/images/wheel.png' alt='Roleta' onClick={this.rodar} className={this.state.girando ? 'girando' : ''}/>
-        <img style={{maxWidth: '100%', display: this.state.premio ? 'inline-block' : 'none'}}
+        <img style={{maxWidth: '80%', width: window.innerWidth, display: this.state.premio ? 'inline-block' : 'none'}}
              src='/images/5_percent.png' alt='Prêmio'/>
       </div>
     );
